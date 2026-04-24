@@ -8,6 +8,27 @@
       "description": "FAQマスタを参照してAIが質問に回答します",
       "appCount": 2,
       "path": "scenarios/faq/scenario.json"
+    },
+    {
+      "id": "sales-analysis",
+      "name": "売上分析",
+      "description": "売上管理データを期間指定で集計し、AIが分析レポートを生成します",
+      "appCount": 2,
+      "path": "scenarios/sales-analysis/scenario.json"
+    },
+    {
+      "id": "order-loss-analysis",
+      "name": "受注失注分析",
+      "description": "案件管理データから成功事例・失敗事例の傾向をAIが分析します",
+      "appCount": 2,
+      "path": "scenarios/order-loss-analysis/scenario.json"
+    },
+    {
+      "id": "cost-analysis",
+      "name": "原価解析",
+      "description": "工事原価と日報データから、AIが工事の原価状況を診断します",
+      "appCount": 3,
+      "path": "scenarios/cost-analysis/scenario.json"
     }
   ]
 }
