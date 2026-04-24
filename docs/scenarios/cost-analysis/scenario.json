@@ -209,7 +209,22 @@
           "type": "SINGLE_LINE_TEXT",
           "code": "工事名",
           "label": "工事名",
-          "required": true
+          "required": true,
+          "lookup": {
+            "relatedApp": {
+              "app": "{{appIds.constructionCost}}"
+            },
+            "relatedKeyField": "工事名",
+            "fieldMappings": [
+              {
+                "field": "工事レコード番号",
+                "relatedField": "レコード番号"
+              }
+            ],
+            "lookupPickerFields": ["工事名", "現場状況"],
+            "filterCond": "",
+            "sort": ""
+          }
         },
         "工事レコード番号": {
           "type": "NUMBER",
