@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "updatedAt": "2026-04-24",
+  "scenarios": [
+    {
+      "id": "faq",
+      "name": "社内FAQ",
+      "description": "FAQマスタを参照してAIが質問に回答します",
+      "appCount": 2,
+      "path": "scenarios/faq/scenario.json"
+    }
+  ]
+}

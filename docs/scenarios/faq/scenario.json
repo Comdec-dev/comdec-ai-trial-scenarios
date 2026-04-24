@@ -1,0 +1,132 @@
+{
+  "id": "faq",
+  "name": "社内FAQ",
+  "description": "FAQマスタを参照してAIが質問に回答します",
+  "apps": [
+    {
+      "role": "reference",
+      "key": "faqMaster",
+      "name": "社内FAQマスタ【コムデック 生成AI for kintone お試し用】",
+      "fields": {
+        "category": {
+          "type": "DROP_DOWN",
+          "code": "category",
+          "label": "カテゴリ",
+          "options": {
+            "総務": { "label": "総務", "index": 0 },
+            "経理": { "label": "経理", "index": 1 },
+            "IT": { "label": "IT", "index": 2 },
+            "人事": { "label": "人事", "index": 3 }
+          },
+          "required": true
+        },
+        "question": {
+          "type": "SINGLE_LINE_TEXT",
+          "code": "question",
+          "label": "質問",
+          "required": true
+        },
+        "answer": {
+          "type": "MULTI_LINE_TEXT",
+          "code": "answer",
+          "label": "回答",
+          "required": true
+        }
+      },
+      "sampleData": [
+        { "category": "総務", "question": "有給休暇の申請方法は?", "answer": "勤怠システムにログインし、休暇申請メニューから申請してください。申請は取得日の3営業日前までにお願いします。" },
+        { "category": "総務", "question": "名刺の発注方法は?", "answer": "総務部の共有フォルダにある名刺発注申請書に記入し、総務部メールアドレスへ送付してください。通常1週間程度で届きます。" },
+        { "category": "総務", "question": "会議室の予約方法は?", "answer": "グループウェアのカレンダーから設備予約を選択し、希望の会議室と時間を指定してください。" },
+        { "category": "総務", "question": "届出の届け先はどこですか?", "answer": "住所変更届、結婚届、扶養変更届などは総務部へ提出してください。用紙は社内ポータルからダウンロードできます。" },
+        { "category": "総務", "question": "健康診断の予約方法は?", "answer": "毎年届く案内メールのリンクから予約してください。日程変更は総務部へ連絡をお願いします。" },
+        { "category": "経理", "question": "経費精算の締め日はいつですか?", "answer": "毎月25日が締め日です。26日以降の申請は翌月精算となります。" },
+        { "category": "経理", "question": "領収書を紛失した場合は?", "answer": "出金伝票に領収書紛失と記載し、上長の承認印をもらって経理部へ提出してください。" },
+        { "category": "経理", "question": "交通費の申請方法は?", "answer": "経費精算システムから交通費を選択し、日付、経路、金額を入力してください。ICカード履歴の添付も可能です。" },
+        { "category": "経理", "question": "請求書の発行を依頼したい", "answer": "経理部の共有フォルダにある請求書発行依頼書に記入し、経理部へメールで送付してください。" },
+        { "category": "経理", "question": "振込先口座を変更したい", "answer": "口座変更届を記入し、通帳コピーを添えて経理部へ提出してください。反映まで1-2週間かかります。" },
+        { "category": "IT", "question": "パスワードを忘れた場合は?", "answer": "情報システム部(内線: 1234)へご連絡ください。本人確認後、仮パスワードを発行します。" },
+        { "category": "IT", "question": "社内Wi-Fiに接続できません", "answer": "接続先SSIDがCompany-WiFiであることを確認してください。パスワードは社内ポータルのIT情報ページに記載されています。" },
+        { "category": "IT", "question": "新しいソフトウェアをインストールしたい", "answer": "ソフトウェア導入申請書を記入し、上長承認後に情報システム部へ提出してください。セキュリティ審査後に対応します。" },
+        { "category": "IT", "question": "PCが起動しなくなった", "answer": "まず電源ケーブルの接続を確認してください。解決しない場合は情報システム部へ連絡し、代替機の手配を依頼してください。" },
+        { "category": "IT", "question": "リモートアクセスの設定方法は?", "answer": "VPNクライアントをインストールし、社員番号とパスワードでログインしてください。手順書は社内ポータルにあります。" },
+        { "category": "人事", "question": "給与明細はどこで確認できますか?", "answer": "給与明細システムにログインし、明細照会から確認できます。過去24ヶ月分が閲覧可能です。" },
+        { "category": "人事", "question": "通勤経路を変更したい", "answer": "通勤届を記入し、人事部へ提出してください。定期代の変更は届出受理後の翌月から反映されます。" },
+        { "category": "人事", "question": "育児休業の申請手続きは?", "answer": "休業開始の1ヶ月前までに育児休業申請書を人事部へ提出してください。詳細は人事担当者との面談で説明します。" },
+        { "category": "人事", "question": "社員証を紛失した場合は?", "answer": "速やかに人事部と情報システム部へ連絡してください。旧カードを無効化し、再発行手続きを行います。再発行費用は1,000円です。" },
+        { "category": "人事", "question": "資格取得支援制度について教えてください", "answer": "会社指定の資格を取得した場合、受験費用と報奨金が支給されます。対象資格一覧は社内ポータルで確認できます。" }
+      ]
+    },
+    {
+      "role": "output",
+      "key": "faqInquiry",
+      "name": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
+      "fields": {
+        "user_select_category": {
+          "type": "CHECK_BOX",
+          "code": "user_select_category",
+          "label": "カテゴリ",
+          "required": true,
+          "options": {
+            "総務": { "label": "総務", "index": 0 },
+            "経理": { "label": "経理", "index": 1 },
+            "IT": { "label": "IT", "index": 2 },
+            "人事": { "label": "人事", "index": 3 }
+          }
+        },
+        "user_question": {
+          "type": "MULTI_LINE_TEXT",
+          "code": "user_question",
+          "label": "質問内容",
+          "required": true
+        },
+        "ai_answer": {
+          "type": "MULTI_LINE_TEXT",
+          "code": "ai_answer",
+          "label": "AI回答"
+        }
+      },
+      "sampleData": [
+        { "user_select_category": ["総務"], "user_question": "有給休暇を取りたいのですが、どうすればいいですか?" }
+      ]
+    }
+  ],
+  "settingTemplate": {
+    "settingName": "【社内FAQ】AI回答生成",
+    "operationType": "button_click",
+    "model": "gpt-4.1",
+    "apiKey": "{{apiKey}}",
+    "licenseKey": "{{licenseKey}}",
+    "prompt": "あなたは社内FAQアシスタントです。\n参照アプリ1(社内FAQマスタ)の情報を基に、ユーザーの質問に回答してください。\n\nルール:\n- FAQに該当する情報がある場合は、その内容を元に回答してください\n- 該当するFAQがない場合は「該当するFAQが見つかりませんでした。担当部署にお問い合わせください。」と回答してください\n- 回答は丁寧な口調で行ってください",
+    "inputFields": [],
+    "outputField": "ai_answer",
+    "outputType": "text",
+    "outputAppId": "{{appIds.faqInquiry}}",
+    "outputAppName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
+    "outputAppUrl": "{{appUrls.faqInquiry}}",
+    "refApps": [
+      {
+        "appId": "{{appIds.faqMaster}}",
+        "appName": "社内FAQマスタ【コムデック 生成AI for kintone お試し用】",
+        "spaceId": null,
+        "spaceName": "",
+        "spaceDisplay": "スペース外",
+        "fields": ["category", "question", "answer"],
+        "query": "category in (\"%user_select_category%\")"
+      },
+      {
+        "appId": "{{appIds.faqInquiry}}",
+        "appName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
+        "spaceId": null,
+        "spaceName": "",
+        "spaceDisplay": "スペース外",
+        "fields": ["user_question"],
+        "query": "レコード番号 = \"%レコード番号%\""
+      }
+    ],
+    "temperature": 0.7,
+    "enableWebSearch": false,
+    "webSearchConfig": {},
+    "enableCodeInterpreter": false,
+    "codeInterpreterConfig": { "fileOutputField": "", "referenceDataAsFile": true }
+  }
+}
