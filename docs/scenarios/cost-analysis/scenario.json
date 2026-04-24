@@ -108,7 +108,22 @@
         "現場名": {
           "type": "SINGLE_LINE_TEXT",
           "code": "現場名",
-          "label": "現場名"
+          "label": "現場名",
+          "lookup": {
+            "relatedApp": {
+              "app": "{{appIds.constructionCost}}"
+            },
+            "relatedKeyField": "工事名",
+            "fieldMappings": [
+              {
+                "field": "現場レコード番号",
+                "relatedField": "レコード番号"
+              }
+            ],
+            "lookupPickerFields": ["工事名", "現場状況"],
+            "filterCond": "",
+            "sort": ""
+          }
         },
         "現場レコード番号": {
           "type": "NUMBER",
