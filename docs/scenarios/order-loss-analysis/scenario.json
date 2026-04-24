@@ -6,7 +6,7 @@
     {
       "role": "reference",
       "key": "dealData",
-      "name": "案件管理/受注失注分析元【コムデック 生成AI for kintone お試し用】",
+      "name": "案件管理【コムデック 生成AI for kintone お試し用】",
       "fields": {
         "案件名": {
           "type": "SINGLE_LINE_TEXT",
@@ -286,7 +286,7 @@
     {
       "role": "output",
       "key": "orderLossAnalysis",
-      "name": "(出力)受注失注分析【コムデック 生成AI for kintone お試し用】",
+      "name": "受注失注分析【コムデック 生成AI for kintone お試し用】",
       "fields": {
         "開始日": {
           "type": "DATE",
@@ -323,12 +323,12 @@
     "outputField": "結果",
     "outputType": "text",
     "outputAppId": "{{appIds.orderLossAnalysis}}",
-    "outputAppName": "(出力)受注失注分析【コムデック 生成AI for kintone お試し用】",
+    "outputAppName": "受注失注分析【コムデック 生成AI for kintone お試し用】",
     "outputAppUrl": "{{appUrls.orderLossAnalysis}}",
     "refApps": [
       {
         "appId": "{{appIds.dealData}}",
-        "appName": "案件管理/受注失注分析元【コムデック 生成AI for kintone お試し用】",
+        "appName": "案件管理【コムデック 生成AI for kintone お試し用】",
         "spaceId": null,
         "spaceName": "",
         "spaceDisplay": "スペース外",

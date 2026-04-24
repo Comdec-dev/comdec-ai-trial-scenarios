@@ -6,7 +6,7 @@
     {
       "role": "reference",
       "key": "constructionCost",
-      "name": "工事原価/原価分析元【コムデック 生成AI for kintone お試し用】",
+      "name": "工事原価【コムデック 生成AI for kintone お試し用】",
       "fields": {
         "工事名": {
           "type": "SINGLE_LINE_TEXT",
@@ -103,7 +103,7 @@
     {
       "role": "reference",
       "key": "dailyReport",
-      "name": "日報管理/原価分析元【コムデック 生成AI for kintone お試し用】",
+      "name": "日報管理【コムデック 生成AI for kintone お試し用】",
       "fields": {
         "現場名": {
           "type": "SINGLE_LINE_TEXT",
@@ -169,7 +169,7 @@
     {
       "role": "output",
       "key": "costAnalysis",
-      "name": "(出力)原価分析【コムデック 生成AI for kintone お試し用】",
+      "name": "原価分析【コムデック 生成AI for kintone お試し用】",
       "fields": {
         "工事名": {
           "type": "SINGLE_LINE_TEXT",
@@ -255,12 +255,12 @@
     "outputField": "アラート・注目ポイント",
     "outputType": "structured",
     "outputAppId": "{{appIds.costAnalysis}}",
-    "outputAppName": "(出力)原価分析【コムデック 生成AI for kintone お試し用】",
+    "outputAppName": "原価分析【コムデック 生成AI for kintone お試し用】",
     "outputAppUrl": "{{appUrls.costAnalysis}}",
     "refApps": [
       {
         "appId": "{{appIds.constructionCost}}",
-        "appName": "工事原価/原価分析元【コムデック 生成AI for kintone お試し用】",
+        "appName": "工事原価【コムデック 生成AI for kintone お試し用】",
         "spaceId": null,
         "spaceName": "",
         "spaceDisplay": "スペース外",
@@ -269,7 +269,7 @@
       },
       {
         "appId": "{{appIds.dailyReport}}",
-        "appName": "日報管理/原価分析元【コムデック 生成AI for kintone お試し用】",
+        "appName": "日報管理【コムデック 生成AI for kintone お試し用】",
         "spaceId": null,
         "spaceName": "",
         "spaceDisplay": "スペース外",
