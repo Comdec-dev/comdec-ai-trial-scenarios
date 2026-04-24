@@ -93,7 +93,7 @@
   "settingTemplate": {
     "settingName": "【社内FAQ】AI回答生成",
     "operationType": "button_click",
-    "model": "gpt-4.1",
+    "model": "gpt-5.4-mini",
     "apiKey": "{{apiKey}}",
     "licenseKey": "{{licenseKey}}",
     "prompt": "あなたは社内FAQアシスタントです。\n参照アプリ1(社内FAQマスタ)の情報を基に、ユーザーの質問に回答してください。\n\nルール:\n- FAQに該当する情報がある場合は、その内容を元に回答してください\n- 該当するFAQがない場合は「該当するFAQが見つかりませんでした。担当部署にお問い合わせください。」と回答してください\n- 回答は丁寧な口調で行ってください",
