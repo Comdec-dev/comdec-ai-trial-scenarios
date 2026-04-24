@@ -267,7 +267,9 @@
             "消化率": {
               "type": "NUMBER",
               "code": "消化率",
-              "label": "消化率"
+              "label": "消化率",
+              "unit": "%",
+              "unitPosition": "AFTER"
             },
             "判定基準": {
               "type": "DROP_DOWN",
