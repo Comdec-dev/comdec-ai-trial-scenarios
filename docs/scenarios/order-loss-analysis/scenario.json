@@ -390,7 +390,6 @@
         "query": "ステータス_受注失注_確定日 <= \"%終了日%\" and ステータス_受注失注_確定日 >= \"%開始日%\""
       }
     ],
-    "temperature": 0.7,
     "reasoningEffort": "none",
     "enableListOutput": false,
     "enableWebSearch": false,

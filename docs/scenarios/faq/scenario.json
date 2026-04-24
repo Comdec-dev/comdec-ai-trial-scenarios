@@ -136,7 +136,6 @@
         "query": "レコード番号 = \"%レコード番号%\""
       }
     ],
-    "temperature": 0.7,
     "enableWebSearch": false,
     "webSearchConfig": {},
     "enableCodeInterpreter": false,

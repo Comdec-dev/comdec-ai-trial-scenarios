@@ -353,7 +353,6 @@
         "query": "現場レコード番号 = \"%工事レコード番号%\" and 日付 < \"%基準日%\""
       }
     ],
-    "temperature": 0.7,
     "reasoningEffort": "none",
     "enableListOutput": false,
     "enableWebSearch": false,
