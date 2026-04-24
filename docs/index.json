@@ -10,18 +10,18 @@
       "path": "scenarios/faq/scenario.json"
     },
     {
-      "id": "sales-analysis",
-      "name": "売上分析",
-      "description": "売上管理データを期間指定で集計し、AIが分析レポートを生成します",
-      "appCount": 2,
-      "path": "scenarios/sales-analysis/scenario.json"
-    },
-    {
       "id": "order-loss-analysis",
       "name": "受注失注分析",
       "description": "案件管理データから成功事例・失敗事例の傾向をAIが分析します",
       "appCount": 2,
       "path": "scenarios/order-loss-analysis/scenario.json"
+    },
+    {
+      "id": "sales-analysis",
+      "name": "売上分析",
+      "description": "売上管理データを期間指定で集計し、AIが分析レポートを生成します",
+      "appCount": 2,
+      "path": "scenarios/sales-analysis/scenario.json"
     },
     {
       "id": "cost-analysis",
