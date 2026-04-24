@@ -33,6 +33,17 @@
           "digit": true
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 売上情報" }] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "年月", "size": { "width": "200" } },
+          { "type": "SINGLE_LINE_TEXT", "code": "分類名", "size": { "width": "300" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "NUMBER", "code": "目標金額", "size": { "width": "200" } },
+          { "type": "NUMBER", "code": "実績金額", "size": { "width": "200" } }
+        ] }
+      ],
       "sampleData": [
         { "年月": "2025-05-01", "分類名": "営業1部", "目標金額": 8000000, "実績金額": 7820000 },
         { "年月": "2025-05-01", "分類名": "営業2部", "目標金額": 6000000, "実績金額": 5930000 },
@@ -108,6 +119,15 @@
           "label": "結果"
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対象期間" }] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "開始日", "size": { "width": "200" } },
+          { "type": "DATE", "code": "終了日", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果" }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "結果", "size": { "width": "800", "innerHeight": "400" } }] }
+      ],
       "sampleData": [
         { "開始日": "2025-05-01", "終了日": "2026-04-30" }
       ]

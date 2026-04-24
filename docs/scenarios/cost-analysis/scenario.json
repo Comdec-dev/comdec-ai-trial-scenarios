@@ -56,6 +56,27 @@
           }
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 工事情報" }] },
+        { "type": "ROW", "fields": [
+          { "type": "SINGLE_LINE_TEXT", "code": "工事名", "size": { "width": "400" } },
+          { "type": "SINGLE_LINE_TEXT", "code": "現場状況", "size": { "width": "300" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "開始日", "size": { "width": "180" } },
+          { "type": "DATE", "code": "終了日", "size": { "width": "180" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 予算・実績明細" }] },
+        {
+          "type": "SUBTABLE",
+          "code": "明細",
+          "fields": [
+            { "type": "SINGLE_LINE_TEXT", "code": "科目", "size": { "width": "200" } },
+            { "type": "NUMBER", "code": "実行予算", "size": { "width": "180" } },
+            { "type": "NUMBER", "code": "実績原価", "size": { "width": "180" } }
+          ]
+        }
+      ],
       "sampleData": [
         {
           "工事名": "サンプル様邸 新築工事",
@@ -146,6 +167,19 @@
           "label": "所感"
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 日報基本情報" }] },
+        { "type": "ROW", "fields": [
+          { "type": "SINGLE_LINE_TEXT", "code": "現場名", "size": { "width": "400" } },
+          { "type": "NUMBER", "code": "現場レコード番号", "size": { "width": "150" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "日付", "size": { "width": "180" } },
+          { "type": "SINGLE_LINE_TEXT", "code": "担当者名", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 内容" }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "所感", "size": { "width": "700", "innerHeight": "150" } }] }
+      ],
       "sampleData": [
         { "現場名": "サンプル様邸 新築工事", "現場レコード番号": 1, "日付": "2026-01-15", "担当者名": "山田工事長", "所感": "基礎掘削開始。土質は予定通り。" },
         { "現場名": "サンプル様邸 新築工事", "現場レコード番号": 1, "日付": "2026-01-25", "担当者名": "山田工事長", "所感": "基礎コンクリート打設完了。" },
@@ -239,6 +273,31 @@
           }
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対象工事" }] },
+        { "type": "ROW", "fields": [
+          { "type": "SINGLE_LINE_TEXT", "code": "工事名", "size": { "width": "400" } },
+          { "type": "NUMBER", "code": "工事レコード番号", "size": { "width": "150" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "基準日", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ アラート・注目ポイント" }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "アラート・注目ポイント", "size": { "width": "800", "innerHeight": "300" } }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 科目別分析テーブル" }] },
+        {
+          "type": "SUBTABLE",
+          "code": "テーブル",
+          "fields": [
+            { "type": "SINGLE_LINE_TEXT", "code": "科目", "size": { "width": "150" } },
+            { "type": "NUMBER", "code": "実行予算", "size": { "width": "150" } },
+            { "type": "NUMBER", "code": "実績原価", "size": { "width": "150" } },
+            { "type": "NUMBER", "code": "消化率", "size": { "width": "120" } },
+            { "type": "DROP_DOWN", "code": "判定基準", "size": { "width": "250" } },
+            { "type": "MULTI_LINE_TEXT", "code": "備考", "size": { "width": "300", "innerHeight": "60" } }
+          ]
+        }
+      ],
       "sampleData": [
         { "工事名": "○○マンション 大規模改修", "工事レコード番号": 2, "基準日": "2026-04-15" }
       ]

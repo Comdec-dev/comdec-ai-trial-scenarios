@@ -96,6 +96,39 @@
           }
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 案件情報" }] },
+        { "type": "ROW", "fields": [
+          { "type": "SINGLE_LINE_TEXT", "code": "案件名", "size": { "width": "400" } },
+          { "type": "SINGLE_LINE_TEXT", "code": "顧客名", "size": { "width": "300" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "SINGLE_LINE_TEXT", "code": "社内担当者", "size": { "width": "200" } },
+          { "type": "DROP_DOWN", "code": "案件ステータス", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "案件概要", "size": { "width": "700", "innerHeight": "100" } }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 日程・金額" }] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "問い合わせ日", "size": { "width": "180" } },
+          { "type": "DATE", "code": "受注予定日", "size": { "width": "180" } },
+          { "type": "NUMBER", "code": "受注予定金額", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "受注日", "size": { "width": "180" } },
+          { "type": "NUMBER", "code": "受注金額", "size": { "width": "200" } },
+          { "type": "DATE", "code": "ステータス_受注失注_確定日", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対応履歴" }] },
+        {
+          "type": "SUBTABLE",
+          "code": "対応履歴",
+          "fields": [
+            { "type": "DATE", "code": "日付", "size": { "width": "150" } },
+            { "type": "SINGLE_LINE_TEXT", "code": "担当者", "size": { "width": "150" } },
+            { "type": "MULTI_LINE_TEXT", "code": "対応内容", "size": { "width": "500", "innerHeight": "60" } }
+          ]
+        }
+      ],
       "sampleData": [
         {
           "案件名": "営業支援システム導入",
@@ -307,6 +340,15 @@
           "label": "結果"
         }
       },
+      "layout": [
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対象期間" }] },
+        { "type": "ROW", "fields": [
+          { "type": "DATE", "code": "開始日", "size": { "width": "200" } },
+          { "type": "DATE", "code": "終了日", "size": { "width": "200" } }
+        ] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果" }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "結果", "size": { "width": "800", "innerHeight": "400" } }] }
+      ],
       "sampleData": [
         { "開始日": "2025-09-01", "終了日": "2026-04-30" }
       ]
