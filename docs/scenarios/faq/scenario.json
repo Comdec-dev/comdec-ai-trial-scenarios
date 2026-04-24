@@ -34,7 +34,7 @@
         }
       },
       "layout": [
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ FAQ情報" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ FAQ情報", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "DROP_DOWN", "code": "category", "size": { "width": "240" } }] },
         { "type": "ROW", "fields": [{ "type": "SINGLE_LINE_TEXT", "code": "question", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "answer", "size": { "width": "600", "innerHeight": "150" } }] }
@@ -92,10 +92,10 @@
         }
       },
       "layout": [
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 質問入力" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 質問入力", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "CHECK_BOX", "code": "user_select_category", "size": { "width": "400" } }] },
         { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "user_question", "size": { "width": "600", "innerHeight": "120" } }] },
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ AI回答" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ AI回答", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "ai_answer", "size": { "width": "600", "innerHeight": "200" } }] }
       ],
       "sampleData": [

@@ -34,7 +34,7 @@
         }
       },
       "layout": [
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 売上情報" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 売上情報", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [
           { "type": "DATE", "code": "年月", "size": { "width": "200" } },
           { "type": "SINGLE_LINE_TEXT", "code": "分類名", "size": { "width": "300" } }
@@ -120,12 +120,12 @@
         }
       },
       "layout": [
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対象期間" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 対象期間", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [
           { "type": "DATE", "code": "開始日", "size": { "width": "200" } },
           { "type": "DATE", "code": "終了日", "size": { "width": "200" } }
         ] },
-        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果" }] },
+        { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "結果", "size": { "width": "800", "innerHeight": "400" } }] }
       ],
       "sampleData": [
