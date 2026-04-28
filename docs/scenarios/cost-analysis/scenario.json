@@ -357,7 +357,7 @@
     "enableListOutput": false,
     "enableWebSearch": false,
     "webSearchConfig": {},
-    "enableCodeInterpreter": false,
+    "enableCodeInterpreter": true,
     "codeInterpreterConfig": { "fileOutputField": "", "referenceDataAsFile": true },
     "outputFormat": {
       "functionName": "generate_content",

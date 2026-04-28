@@ -209,7 +209,7 @@
     "enableListOutput": false,
     "enableWebSearch": false,
     "webSearchConfig": {},
-    "enableCodeInterpreter": false,
+    "enableCodeInterpreter": true,
     "codeInterpreterConfig": { "fileOutputField": "", "referenceDataAsFile": true },
     "buttonPermission": {
       "enabled": false,
