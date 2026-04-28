@@ -390,7 +390,7 @@
         "query": "ステータス_受注失注_確定日 <= \"%終了日%\" and ステータス_受注失注_確定日 >= \"%開始日%\""
       }
     ],
-    "reasoningEffort": "none",
+    "reasoningEffort": "low",
     "enableListOutput": false,
     "enableWebSearch": false,
     "webSearchConfig": {},

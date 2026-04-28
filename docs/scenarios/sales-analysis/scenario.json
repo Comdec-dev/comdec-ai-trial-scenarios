@@ -205,7 +205,7 @@
         "query": "年月 <= \"%終了日%\" and 年月 >= \"%開始日%\""
       }
     ],
-    "reasoningEffort": "none",
+    "reasoningEffort": "low",
     "enableListOutput": false,
     "enableWebSearch": false,
     "webSearchConfig": {},
