@@ -106,7 +106,7 @@
           { "type": "SINGLE_LINE_TEXT", "code": "社内担当者", "size": { "width": "200" } },
           { "type": "DROP_DOWN", "code": "案件ステータス", "size": { "width": "200" } }
         ] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "案件概要", "size": { "width": "700", "innerHeight": "100" } }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "案件概要", "size": { "width": "1000", "innerHeight": "100" } }] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 日程・金額", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [
           { "type": "DATE", "code": "問い合わせ日", "size": { "width": "180" } },
@@ -125,7 +125,7 @@
           "fields": [
             { "type": "DATE", "code": "日付", "size": { "width": "150" } },
             { "type": "SINGLE_LINE_TEXT", "code": "担当者", "size": { "width": "150" } },
-            { "type": "MULTI_LINE_TEXT", "code": "対応内容", "size": { "width": "500", "innerHeight": "60" } }
+            { "type": "MULTI_LINE_TEXT", "code": "対応内容", "size": { "width": "700", "innerHeight": "60" } }
           ]
         }
       ],
@@ -347,7 +347,7 @@
           { "type": "DATE", "code": "終了日", "size": { "width": "200" } }
         ] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "結果", "size": { "width": "800", "innerHeight": "400" } }] }
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "結果", "size": { "width": "1100", "innerHeight": "400" } }] }
       ],
       "sampleData": [
         { "開始日": "2025-09-01", "終了日": "2026-04-30" }

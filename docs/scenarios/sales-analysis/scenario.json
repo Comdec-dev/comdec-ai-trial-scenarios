@@ -174,7 +174,7 @@
           { "type": "DATE", "code": "終了日", "size": { "width": "200" } }
         ] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 分析結果", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "RICH_TEXT", "code": "結果", "size": { "width": "800", "innerHeight": "400" } }] }
+        { "type": "ROW", "fields": [{ "type": "RICH_TEXT", "code": "結果", "size": { "width": "1100", "innerHeight": "400" } }] }
       ],
       "sampleData": [
         { "開始日": "2024-05-01", "終了日": "2026-04-30" }

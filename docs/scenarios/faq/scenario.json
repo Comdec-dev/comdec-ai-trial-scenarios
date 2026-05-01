@@ -36,8 +36,8 @@
       "layout": [
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ FAQ情報", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "DROP_DOWN", "code": "category", "size": { "width": "240" } }] },
-        { "type": "ROW", "fields": [{ "type": "SINGLE_LINE_TEXT", "code": "question", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "answer", "size": { "width": "600", "innerHeight": "150" } }] }
+        { "type": "ROW", "fields": [{ "type": "SINGLE_LINE_TEXT", "code": "question", "size": { "width": "900" } }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "answer", "size": { "width": "900", "innerHeight": "150" } }] }
       ],
       "sampleData": [
         { "category": "総務", "question": "有給休暇の申請方法は?", "answer": "勤怠システムにログインし、休暇申請メニューから申請してください。申請は取得日の3営業日前までにお願いします。" },
@@ -94,9 +94,9 @@
       "layout": [
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 質問入力", "size": { "width": "600" } }] },
         { "type": "ROW", "fields": [{ "type": "CHECK_BOX", "code": "user_select_category", "size": { "width": "400" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "user_question", "size": { "width": "600", "innerHeight": "120" } }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "user_question", "size": { "width": "900", "innerHeight": "120" } }] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ AI回答", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "ai_answer", "size": { "width": "600", "innerHeight": "200" } }] }
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "ai_answer", "size": { "width": "900", "innerHeight": "200" } }] }
       ],
       "sampleData": [
         { "user_select_category": ["総務"], "user_question": "有給休暇を取りたいのですが、どうすればいいですか?" }

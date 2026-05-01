@@ -178,7 +178,7 @@
           { "type": "SINGLE_LINE_TEXT", "code": "担当者名", "size": { "width": "200" } }
         ] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 内容", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "所感", "size": { "width": "700", "innerHeight": "150" } }] }
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "所感", "size": { "width": "1000", "innerHeight": "150" } }] }
       ],
       "sampleData": [
         { "現場名": "サンプル様邸 新築工事", "現場レコード番号": 1, "日付": "2026-01-15", "担当者名": "山田太郎", "所感": "基礎掘削開始。土質は予定通り。" },
@@ -300,7 +300,7 @@
           { "type": "DATE", "code": "基準日", "size": { "width": "200" } }
         ] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ アラート・注目ポイント", "size": { "width": "600" } }] },
-        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "アラート・注目ポイント", "size": { "width": "800", "innerHeight": "300" } }] },
+        { "type": "ROW", "fields": [{ "type": "MULTI_LINE_TEXT", "code": "アラート・注目ポイント", "size": { "width": "1100", "innerHeight": "300" } }] },
         { "type": "ROW", "fields": [{ "type": "LABEL", "label": "■ 科目別分析テーブル", "size": { "width": "600" } }] },
         {
           "type": "SUBTABLE",
@@ -311,7 +311,7 @@
             { "type": "NUMBER", "code": "実績原価", "size": { "width": "150" } },
             { "type": "NUMBER", "code": "消化率", "size": { "width": "120" } },
             { "type": "DROP_DOWN", "code": "判定基準", "size": { "width": "250" } },
-            { "type": "MULTI_LINE_TEXT", "code": "備考", "size": { "width": "300", "innerHeight": "60" } }
+            { "type": "MULTI_LINE_TEXT", "code": "備考", "size": { "width": "500", "innerHeight": "60" } }
           ]
         }
       ],
