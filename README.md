@@ -60,8 +60,8 @@ docs/
   "id": "faq",
   "name": "社内FAQ",
   "description": "...",
-  "apps": [...],            // 作成するアプリの定義（フィールド・サンプルデータ）
-  "settingTemplate": {...}  // AI設定のテンプレート
+  "apps": [...],              // 作成するアプリの定義（フィールド・サンプルデータ）
+  "settingTemplates": [...]   // AI設定のテンプレート（配列。1シナリオに複数設定可）
 }
 ```
 
@@ -69,8 +69,8 @@ docs/
 
 ```json
 {
-  "role": "reference|output",   // 参照アプリ or 出力アプリ
-  "key": "faqMaster",           // settingTemplate内で参照するキー
+  "role": "reference|output",   // 参照アプリ or 出力アプリ（表示・分類用途。JS反映先の判定には使われない）
+  "key": "faqMaster",           // settingTemplates内で参照するキー
   "name": "アプリ名",
   "fields": {                    // kintone REST API のフィールド定義形式
     "fieldCode": { "type": "...", "code": "...", "label": "..." }
@@ -81,14 +81,16 @@ docs/
 }
 ```
 
-- `role`: `reference`（参照アプリ）または `output`（出力アプリ）
-- `key`: 同シナリオ内で一意なキー。`settingTemplate` 内のプレースホルダで参照
+- `role`: `reference`（参照アプリ）または `output`（出力アプリ）。UI表示上の分類であり、どのアプリにAI連携用JSを反映するかは各`settingTemplates[].outputAppId`が指すアプリで決まる
+- `key`: 同シナリオ内で一意なキー。`settingTemplates` 内のプレースホルダで参照
 - `fields`: kintone REST API `/k/v1/preview/app/form/fields.json` の `properties` と同形式
 - `sampleData`: 各オブジェクトのキーがフィールドコード、値がフィールド値
 
-#### `settingTemplate`（AI設定テンプレート）
+#### `settingTemplates[]`（AI設定テンプレート）
 
-AI設定の `settingJson` と同じ形式です。プレースホルダで動的な値を埋め込めます。
+各要素はAI設定の `settingJson` と同じ形式です。プレースホルダで動的な値を埋め込めます。
+
+1シナリオに複数のAI設定を持たせることができます（例: 分析用の `button_click` 型設定と、同じ参照アプリに対する `chat` 型の対話設定を1シナリオ内に併存させる）。体験会セットアップは配列内の各テンプレートごとにAI設定レコードを作成し、各テンプレートの `outputAppId` が指すアプリに対してAI連携用JS（AI_Sync.js）を自動反映します。
 
 | プレースホルダ | 置換内容 |
 |---|---|

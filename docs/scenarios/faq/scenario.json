@@ -103,42 +103,49 @@
       ]
     }
   ],
-  "settingTemplate": {
-    "settingName": "【社内FAQ】AI回答生成",
-    "operationType": "button_click",
-    "model": "gpt-5.4-mini",
-    "apiKey": "{{apiKey}}",
-    "licenseKey": "{{licenseKey}}",
-    "prompt": "あなたは社内FAQアシスタントです。\n参照アプリ1(社内FAQマスタ)の情報を基に、ユーザーの質問に回答してください。\n\nルール:\n- FAQに該当する情報がある場合は、その内容を元に回答してください\n- 該当するFAQがない場合は「該当するFAQが見つかりませんでした。担当部署にお問い合わせください。」と回答してください\n- 回答は丁寧な口調で行ってください",
-    "inputFields": [],
-    "outputField": "ai_answer",
-    "outputType": "text",
-    "outputAppId": "{{appIds.faqInquiry}}",
-    "outputAppName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
-    "outputAppUrl": "{{appUrls.faqInquiry}}",
-    "refApps": [
-      {
-        "appId": "{{appIds.faqMaster}}",
-        "appName": "社内FAQマスタ【コムデック 生成AI for kintone お試し用】",
-        "spaceId": null,
-        "spaceName": "",
-        "spaceDisplay": "スペース外",
-        "fields": ["category", "question", "answer"],
-        "query": "category in (\"%user_select_category%\")"
-      },
-      {
-        "appId": "{{appIds.faqInquiry}}",
-        "appName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
-        "spaceId": null,
-        "spaceName": "",
-        "spaceDisplay": "スペース外",
-        "fields": ["user_question"],
-        "query": "レコード番号 = \"%レコード番号%\""
+  "settingTemplates": [
+    {
+      "settingName": "【社内FAQ】AI回答生成",
+      "operationType": "button_click",
+      "model": "gpt-5.4-mini",
+      "apiKey": "{{apiKey}}",
+      "licenseKey": "{{licenseKey}}",
+      "prompt": "あなたは社内FAQアシスタントです。\n参照アプリ1(社内FAQマスタ)の情報を基に、ユーザーの質問に回答してください。\n\nルール:\n- FAQに該当する情報がある場合は、その内容を元に回答してください\n- 該当するFAQがない場合は「該当するFAQが見つかりませんでした。担当部署にお問い合わせください。」と回答してください\n- 回答は丁寧な口調で行ってください",
+      "inputFields": [],
+      "outputField": "ai_answer",
+      "outputType": "text",
+      "outputAppId": "{{appIds.faqInquiry}}",
+      "outputAppName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
+      "outputAppUrl": "{{appUrls.faqInquiry}}",
+      "refApps": [
+        {
+          "appId": "{{appIds.faqMaster}}",
+          "appName": "社内FAQマスタ【コムデック 生成AI for kintone お試し用】",
+          "spaceId": null,
+          "spaceName": "",
+          "spaceDisplay": "スペース外",
+          "fields": ["category", "question", "answer"],
+          "query": "category in (\"%user_select_category%\")"
+        },
+        {
+          "appId": "{{appIds.faqInquiry}}",
+          "appName": "FAQ問い合わせ【コムデック 生成AI for kintone お試し用】",
+          "spaceId": null,
+          "spaceName": "",
+          "spaceDisplay": "スペース外",
+          "fields": ["user_question"],
+          "query": "レコード番号 = \"%レコード番号%\""
+        }
+      ],
+      "enableWebSearch": false,
+      "webSearchConfig": {},
+      "enableCodeInterpreter": false,
+      "codeInterpreterConfig": { "fileOutputField": "", "referenceDataAsFile": true },
+      "chatEdit": {
+        "enabled": true,
+        "maxTurns": 10,
+        "suggestMemory": true
       }
-    ],
-    "enableWebSearch": false,
-    "webSearchConfig": {},
-    "enableCodeInterpreter": false,
-    "codeInterpreterConfig": { "fileOutputField": "", "referenceDataAsFile": true }
-  }
+    }
+  ]
 }
